@@ -3,9 +3,6 @@ from len_filter import TenWordsLengthFilter
 from opusfilter.opusfilter import OpusFilter
 
 
-
-
-
 class TestTenWordsLengthFilter(unittest.TestCase):
     
     def setUp(self) -> None:
@@ -38,7 +35,4 @@ class TestTenWordsLengthFilter(unittest.TestCase):
 
     def test_get_length(self):
         test_string = "We need more heroines like you, Tina."
-        self.assertEqual(len(test_string), 37)
-        
-
-    
+        self.assertEqual(len(test_string), 37)      
