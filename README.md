@@ -9,9 +9,7 @@ TenWordsLengthFilter - specific filter to delete all sentences longer than 10 wo
 Before using this filter make sure that opusfilter is preinstalled on your local machine. Than follow these steps:
 1. Clone the repository onto your local machine by following command:
    
-`git clone https://github.com/ADv0rnik/Lingvanex_test.git`
-
-or if you are using ssh
+`git clone https://github.com/ADv0rnik/Lingvanex_test.git` or if you are using ssh
 
 `git clone git@github.com:ADv0rnik/Lingvanex_test.git`
 
