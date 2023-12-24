@@ -31,13 +31,18 @@ python3 -m unittest tests
 
 #### Troubleshooting
 Some possible issues:
+
 **1. Module not found**
+
 *Solution*: Make sure that you added filter module to PYTHONPATH environment variable. Check it with Python `sys` module
+
 ```python
 import sys
 print(sys.path)
 ```
 
 **2. opusfilter.ConfigurationError: Number of input and output files should match in sort**
+
 The filter command requires a list of input files as well as the similar number of output files
+
 *Solution*: Make sure that the number of inputs align with the number of outputs
