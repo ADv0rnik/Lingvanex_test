@@ -13,7 +13,7 @@ or if you are using ssh
 `git clone git@github.com:ADv0rnik/Lingvanex_test.git`
 2. Create virtual environment by using:
 `python -m venv venv`
-3. Setup your `config.yml` file.
+3. Setup your `config.yml` file (if you going to run opusfilter with CONFIG flag). Check this [page](https://helsinki-nlp.github.io/OpusFilter/usage.html) for more details.
 4. Add the directory that contains filter module to PYTHONPATH environment variable by using the following command:
 ```commandline
 export PYTHONPATH="${PYTHONPATH}:/path/to/your/module/"
