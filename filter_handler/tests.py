@@ -1,9 +1,6 @@
 import unittest
-from len_filter import TenWordsLengthFilter
+import random
 from opusfilter.opusfilter import OpusFilter
-
-
-
 
 
 class TestTenWordsLengthFilter(unittest.TestCase):
@@ -39,6 +36,15 @@ class TestTenWordsLengthFilter(unittest.TestCase):
     def test_get_length(self):
         test_string = "We need more heroines like you, Tina."
         self.assertEqual(len(test_string), 37)
-        
 
-    
+    def test_output_file(self):
+        indx = random.randint(0, 100)
+        try:
+            with open("text_f.en-ru.en", "r") as file:
+                data = file.readlines()
+                random_segment = data[indx].split()
+                self.assertLessEqual(len(random_segment), 10)    
+        except FileNotFoundError as error:
+            print(error)
+        except IndexError as error_:
+            print(error_)

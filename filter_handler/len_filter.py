@@ -8,7 +8,8 @@ class TenWordsLengthFilter(FilterABC):
     reject_threshold = (math.inf, 0) 
            
     def __init__(self, max_length=10, pass_empty=False, **kwargs):
-        self.max_length = max_length
+        if max_length != 10:
+            self.max_length = 10
         self.unit = 'word'
         self.pass_empty = pass_empty
         super().__init__(**kwargs)
