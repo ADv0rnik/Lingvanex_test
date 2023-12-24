@@ -30,9 +30,9 @@ python3 -m unittest tests
 ```
 
 #### Troubleshooting
-Some possible issues:
+Some possible issues:<br>
 
-**1. Module not found**
+**1. Module not found**<br>
 
 *Solution*: Make sure that you added filter module to PYTHONPATH environment variable. Check it with Python `sys` module
 
