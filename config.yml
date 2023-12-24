@@ -1,14 +1,15 @@
+common:
+  output_directory: .
 steps:
-  - type: filter
-    parameters:
-      inputs: 
-        - WikiMatrix.en-ru.en
-        - WikiMatrix.en-ru.ru
-      outputs: 
-        - WikiMatrix_filtered.en-ru.en
-        - WikiMatrix_filtered.en-ru.ru
-      filters: 
-        - TenWordsLengthFilter:
-            unit: word            
-            max_length: 10
-          module: len_filter
+- type: filter
+  parameters:
+    inputs:
+    - WikiMatrix.en-ru.en
+    - WikiMatrix.en-ru.ru
+    outputs:
+    - text_f.en-ru.en
+    - text_f.en-ru.ru
+    filters:
+    - TenWordsLengthFilter:
+        max_length: 10
+      module: len_filter
