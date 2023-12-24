@@ -8,13 +8,17 @@ TenWordsLengthFilter - specific filter to delete all sentences longer than 10 wo
 #### Usage
 Before using this filter make sure that opusfilter is preinstalled on your local machine. Than follow these steps:
 1. Clone the repository onto your local machine by following command:
+   
 `git clone https://github.com/ADv0rnik/Lingvanex_test.git`
+
 or if you are using ssh
+
 `git clone git@github.com:ADv0rnik/Lingvanex_test.git`
-2. Create virtual environment by using:
+
+3. Create virtual environment by using:
 `python -m venv venv`
-3. Setup your `config.yml` file (if you going to run opusfilter with CONFIG flag). Check this [page](https://helsinki-nlp.github.io/OpusFilter/usage.html) for more details.
-4. Add the directory that contains filter module to PYTHONPATH environment variable by using the following command:
+4. Setup your `config.yml` file (if you going to run opusfilter with CONFIG flag). Check this [page](https://helsinki-nlp.github.io/OpusFilter/usage.html) for more details.
+5. Add the directory that contains filter module to PYTHONPATH environment variable by using the following command:
 ```commandline
 export PYTHONPATH="${PYTHONPATH}:/path/to/your/module/"
 ```
