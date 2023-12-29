@@ -16,3 +16,18 @@ class StringCleaner(PreprocessorABC):
         for segments in pairs:
             yield [self.__clean_string(segment) for segment in segments]
 
+
+class UnicodeCleaner(PreprocessorABC):
+    """
+    The class helps to remove unprintable characters and left only ASCII printable characters.
+    No input arguments required
+    """
+
+    @staticmethod
+    def __remove_unprintable(segment):
+        printable_segment = ''.join(x for x in segment if x.isprintable())
+        return printable_segment
+
+    def process(self, pairs):
+        for segments in pairs:
+            yield [self.__remove_unprintable(segment) for segment in segments]

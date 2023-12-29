@@ -36,9 +36,10 @@ steps:
         threshold: 0.7
     - LengthRatioFilter:
         unit: word
-        threshold: 5
+        threshold: 3
     - LanguageIDFilter:
         id_method: cld2
         languages: [ en, ru ]
         thresholds: [ 0.5, 0.5 ]
-      
+    - LongWordFilter:
+        threshold: 20
