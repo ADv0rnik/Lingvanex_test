@@ -1,15 +1,44 @@
 common:
-  output_directory: .
+  output_directory: outputs/
 steps:
+- type: preprocess
+  parameters:
+    inputs:
+      - text.en-ru.en
+      - text.en-ru.ru
+    outputs:
+      - text_preprocessed.en-ru.en
+      - text_preprocessed.en-ru.ru
+    preprocessors:
+      - WhitespaceNormalizer: {}
+      - StringCleaner: {}
+        module: 'preprocessor'
+- type: remove_duplicates
+  parameters:
+    inputs:
+      - text_preprocessed.en-ru.en
+      - text_preprocessed.en-ru.ru
+    outputs:
+      - text_preprocessed_rd.en-ru.en
+      - text_preprocessed_rd.en-ru.ru
+    compare: all
+
 - type: filter
   parameters:
     inputs:
-    - WikiMatrix.en-ru.en
-    - WikiMatrix.en-ru.ru
+    - text_preprocessed_rd.en-ru.en
+    - text_preprocessed_rd.en-ru.ru
     outputs:
     - text_f.en-ru.en
     - text_f.en-ru.ru
     filters:
-    - TenWordsLengthFilter:
-        max_length: 10
-      module: len_filter
+    - SimilarityFilter:
+        threshold: 0.7
+    - LengthRatioFilter:
+        unit: word
+        threshold: 5
+    - LanguageIDFilter:
+        id_method: cld2
+        languages: [ en, ru ]
+        thresholds: [ 0.5, 0.5 ]
+      

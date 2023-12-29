@@ -1,5 +1,6 @@
 /venv
 __pycache__/
+.idea/
 
 
 text_f.en-ru.ru
@@ -7,3 +8,9 @@ text_f.en-ru.en
 
 WikiMatrix.en-ru.en
 WikiMatrix.en-ru.ru
+/outputs/text.en-ru.en
+/outputs/text.en-ru.ru
+/outputs/text_preprocessed.en-ru.en
+/outputs/text_preprocessed.en-ru.ru
+/outputs/text_preprocessed_rd.en-ru.en
+/outputs/text_preprocessed_rd.en-ru.ru

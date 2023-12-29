@@ -16,7 +16,8 @@ class TenWordsLengthFilter(FilterABC):
         self.pass_empty = pass_empty
         super().__init__(**kwargs)
 
-    def get_length(self, segment):
+    @staticmethod
+    def get_length(segment):
         return len(segment.split())
 
     def score(self, pairs):

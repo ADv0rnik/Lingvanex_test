@@ -1,6 +1,11 @@
 import unittest
 import random
+
+from pathlib import Path
 from opusfilter.opusfilter import OpusFilter
+
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 class TestTenWordsLengthFilter(unittest.TestCase):
@@ -19,7 +24,7 @@ class TestTenWordsLengthFilter(unittest.TestCase):
                             'text_f.en-ru.en',
                             'text_f.en-ru.ru'
                         ],
-                        'filters': [{
+                        'cstm_filters': [{
                             'TenWordsLengthFilter': {
                                 'unit': 'word',
                                 'max_length': 10
