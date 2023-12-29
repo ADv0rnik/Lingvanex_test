@@ -33,7 +33,7 @@ Before using this filter make sure that opusfilter is preinstalled on your local
    ```commandline
    update_pythonpath
    ```
-6. Once the `config.json` set up run the following command from the terminal:
+6. Once the `config.json` is set up run the following command from the terminal:
    ```commandline
    run_opus
    ```
