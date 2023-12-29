@@ -1,0 +1,2 @@
+alias update_pythonpath='cd scripts/ && bash add_to_pypath.sh'
+alias run_opus='python runner.py'
