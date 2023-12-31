@@ -15,3 +15,9 @@ WikiMatrix.en-ru.ru
 /outputs/text_preprocessed.en-ru.ru
 /outputs/text_preprocessed_rd.en-ru.en
 /outputs/text_preprocessed_rd.en-ru.ru
+/outputs/text_filtered.en-ru.en
+/outputs/text_filtered.en-ru.ru
+/tests/outputs/text.en-ru.en
+/tests/outputs/text.en-ru.ru
+/tests/outputs/text_test.en-ru.en
+/tests/outputs/text_test.en-ru.ru

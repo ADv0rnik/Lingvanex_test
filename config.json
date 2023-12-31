@@ -52,8 +52,8 @@
           "text_preprocessed_rd.en-ru.ru"
         ],
         "outputs": [
-          "text_f.en-ru.en",
-          "text_f.en-ru.ru"
+          "text_filtered.en-ru.en",
+          "text_filtered.en-ru.ru"
         ],
         "filters": [
           {
