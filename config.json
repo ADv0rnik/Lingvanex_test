@@ -1,14 +1,15 @@
 {
   "common": {
-    "output_directory": "outputs/"
+    "output_directory": "outputs/",
+    "default_n_jobs": 6
   },
   "steps": [
     {
       "type": "preprocess",
       "parameters": {
         "inputs": [
-          "text.en-ru.en",
-          "text.en-ru.ru"
+          "WikiMatrix.en-ru.en",
+          "WikiMatrix.en-ru.ru"
         ],
         "outputs": [
           "text_preprocessed.en-ru.en",
@@ -83,6 +84,10 @@
             "LongWordFilter": {
               "threshold": 20
             }
+          },
+          {
+            "GrammarFilter": {},
+            "module": "filters"
           }
         ]
       }
